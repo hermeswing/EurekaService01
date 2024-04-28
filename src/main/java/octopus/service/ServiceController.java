@@ -30,7 +30,7 @@ public class ServiceController {
 
     @GetMapping("/message")
     public String message(@RequestHeader("first-request") String header) {
-        log.info(header);
+        log.info("RequestHeader 메시지 :: {}", header);
         return "Service #01 입니다.";
     }
 
